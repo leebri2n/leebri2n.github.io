@@ -67,7 +67,8 @@
 
             <br> <br>
             In this project, I worked with my supervisor Logan Eisenbeiser to study
-            how to train viable GANs faster and with less data by way of transfer learning.
+            how to train GANs capable of realistic image generation with shorter training time
+            and with less data by way of transfer learning.
             Transfer learning is the method of continuing the training of a pretrained
             network on a new dataset, a target domain.
 
@@ -90,13 +91,25 @@
         <div class="about__text">
           <!-- Replace the below paragraph with info about yourself -->
           <p>
-            WIP
+            Firstly, we desired a way to curate small datasets of images. To do so,
+            we created a data pipeline to automate the scraping of images and filtering
+            of images. For the scraping portion of the pipeline, we scraped images
+            from public Instagram posts by hashtag using the Python Instascrape package.
+            Images from Instagram emulate the kind of variability that would exist in domains
+            limited by specifiicity or an abundance of examples.
+
+            <br><br>
+            After scraping and storing these images, the filter portion of a pipeline
+            would sort through the raw dataset and discard poor training examples or those
+            with elements difficult for the GAN to train with. This entails only keeping
+            images of a sufficient resolution, sharpness, and automatically rejecting
+            images that contain text, human faces, or are grayscale.
 
           </p>
         </div>
 
         <div class="about__photo-container">
-          <img src="./images/eshaepthumb3.png" class="work__image" alt="Project 1" />
+          <img src="./images/pipeline.png" class="work__image" alt="Project 1" />
         </div>
       </div>
     </div>
