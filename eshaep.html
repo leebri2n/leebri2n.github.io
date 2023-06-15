@@ -103,13 +103,14 @@
             would sort through the raw dataset and discard poor training examples or those
             with elements difficult for the GAN to train with. This entails only keeping
             images of a sufficient resolution, sharpness, and automatically rejecting
-            images that contain text, human faces, or are grayscale.
+            images that contain text, human faces, or are grayscale. What is left behind
+            is a small dataset ready for training.
 
           </p>
         </div>
 
         <div class="about__photo-container">
-          <img src="./images/pipeline.png" class="work__image" alt="Project 1" />
+          <img src="./images/eshaep/pipeline.png" class="work__image" alt="pipeline" />
         </div>
       </div>
     </div>
@@ -122,13 +123,24 @@
         <div class="about__text">
           <!-- Replace the below paragraph with info about yourself -->
           <p>
-            WIP
+            Next, training experiments were then run on Virginia Tech Advanced Research
+            Computing (ARC) GPU clusters. We used NVIDIA's StyleGAN3 model, a GAN model
+            known for being adept at differentiating alternate styles of generated images.
+            Using batch jobs of Python scripts, GANs were trained using found hyperparameters,
+            a chosen network, dataset, and training length.
+
+            <br> <br>
+            Performance of these trained GANs and the realism of their generations are
+            measured by the Frechet Inception Distance (FID) score that measures the
+            distance between the real and generated images. The model generates examples
+            at snapshots in the training process to assemble performance metrics throughout training.
 
           </p>
         </div>
 
         <div class="about__photo-container">
-          <img src="./images/eshaepthumb3.png" class="work__image" alt="Project 1" />
+          <img src="./images/eshaep/dataset1.png" class="work__image" alt="Project 1" />
+          <img src="./images/eshaep/network-jet.png" class="work__image" alt="Project 1" />
         </div>
       </div>
     </div>
