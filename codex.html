@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/tabicon.png" />
+
+  <!-- Put your site title here -->
+  <title>
+    Brian Lee | Undergraduate Compuational Modeling and Data Analytics at Virginia Tech.
+  </title>
+
+  <meta name="description" content="Add small description of yourslef.">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="leebri2n.github.io" class="nav__link">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <!-- Replace the following name with your name -->
+          <span>Transfer Learning on GANs</span>
+        </h1>
+        <!-- Put a small paragraph about yourself -->
+        <p>Brian Lee, Logan Eisenbeiser</p>
+        <p>Virginia Tech National Security Institute, 2022-2025 </p>
+        <a href="https://itea.org/journals/volume-44-2/training-generative-adversarial-networks-on-small-datasets-by-way-of-transfer-learning/" class="btn btn--pink">ITEA Article</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="about" id="background">
+    <div class="row">
+      <h2>Background</h2>
+      <div class="about__content">
+        <div class="about__text">
+          <!-- Replace the below paragraph with info about yourself -->
+          <p>
+            Ever since their introduction in 2014 by Ian Goodfellow and colleagues,
+            generative adversarial networks (GANs) have been a popular subject of study
+            in the field of generative modeling methods. They have gained particular
+            popularity in the community because of the relatively heightened realism
+            and originality of the samples they can generate.
+
+            <br> <br>
+            Despite the exciting results GANs have achieved, the training process is
+            often challenging, fraught with known pitfalls resulting in poor model
+            behavior. Some of these training failures occur by the adversarial
+            nature of the model's two networks, in which one model's performance comes
+            at the expense of the other. Other training failures arise from computational
+            constraints. Not only does training time need to be long enough, but
+            sufficiently diverse and abundant training data is required to produce
+            realistic results.
+
+            <br> <br>
+            We wonder the implications, then, of using shorter training times and smaller datasets 
+            by way of transfer learning to train GANs to similar quality.
+          </p>
+        </div>
+
+        <div class="about__photo-container">
+          <img src="./images/eshaep/gan.jpeg" class="work__image" alt="gan" />
+          <img src="./images/eshaep/goodfellowcifar.png" class="work__image" alt="goodfellowcifar" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="background">
+    <div class="row">
+      <h2>Methods: Data Pipeline</h2>
+      <div class="about__content">
+        <div class="about__text">
+          <!-- Replace the below paragraph with info about yourself -->
+          <p>
+            Firstly, we desired a way to curate small datasets of images. To do so,
+            we created a data pipeline to automate the scraping of images and filtering
+            of images. For the scraping portion of the pipeline, we scraped images
+            from public Instagram posts by hashtag using the Python Instascrape package.
+            Images from Instagram emulate the kind of variability that would exist in domains
+            limited by specifiicity or an abundance of examples.
+
+            <br><br>
+            After scraping and storing these images, the filter portion of a pipeline
+            would sort through the raw dataset and discard poor training examples or those
+            with elements difficult for the GAN to train with. This entails only keeping
+            images of a sufficient resolution, sharpness, and automatically rejecting
+            images that contain text, human faces, or are grayscale. What is left behind
+            is a small dataset ready for training.
+
+          </p>
+        </div>
+
+        <div class="about__photo-container">
+          <img src="./images/eshaep/pipeline.png" class="work__image" alt="pipeline" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="background">
+    <div class="row">
+      <h2>Methods: Training and Performance</h2>
+      <div class="about__content">
+        <div class="about__text">
+          <!-- Replace the below paragraph with info about yourself -->
+          <p>
+            Next, training experiments were then run on Virginia Tech Advanced Research
+            Computing (ARC) GPU clusters. We used NVIDIA's StyleGAN3 model, a GAN model
+            known for being adept at differentiating alternate styles of generated images.
+            Using batch jobs of Python scripts, GANs were trained using found hyperparameters,
+            a chosen network, dataset, and training length.
+
+            <br> <br>
+            Performance of these trained GANs and the realism of their generations are
+            measured by the Frechet Inception Distance (FID) score that measures the
+            distance between the real and generated images. The model generates examples
+            at snapshots in the training process to assemble performance metrics throughout training.
+
+          </p>
+        </div>
+
+        <div class="about__photo-container">
+          <img src="./images/eshaep/stylegan.png" class="work__image" alt="Project 1" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="background">
+    <div class="row">
+      <h2>Results</h2>
+      <div class="about__content">
+        <div class="about__text">
+          <!-- Replace the below paragraph with info about yourself -->
+          <p>
+            As hypothesized, certain datasets resulted in better quality generations
+            than others. In addition, the choice of pre-trained network seemed to
+            yield different training results as well.
+
+            <br><br>
+            First, I chose images from "#beachsunsets" to serve as a control dataset because of
+            its relative simple contents and geometry. While some datasets would perform worse
+            with a higher FID score, there would be some datasets that perform better.
+            A dataset scraped from "#bettafish" roughly saw a 21% reduction in FID score  compared
+            to the control dataset as training continued. The sample generations from the networks
+            seemed to confirm this improvement, as generations appeared consistent and lifelike,
+            with the generated fish possessing anatomically correct features.
+
+          </p>
+        </div>
+
+        <div class="about__photo-container">
+          <img src="./images/eshaep/dataset1.png" class="work__image" alt="Project 1" />
+          <img src="./images/eshaep/network-jet.png" class="work__image" alt="Project 1" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="background">
+    <div class="row">
+      <h2>Future Work</h2>
+      <div class="about__content">
+        <div class="about__text">
+          <!-- Replace the below paragraph with info about yourself -->
+          <p>
+            The future work that remains the most pressing is the definition of metrics and metadata to describe
+            attributes of image datasets. These attributes and how they interact may be latent while being 
+            highly impactful in transfer learning. The differential performance demonstrated by this work suggests 
+            that these attributes exist. However, characterizing the contents and complexity of an image dataset 
+            remains difficult.
+
+          </p>
+        </div>
+
+        <div class="about__photo-container">
+          <img src="./images/eshaepthumb3.png" class="work__image" alt="Project 1" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <main role="main">
+  <script src="./index.js"></script>
+
+</body>
+
+</html>

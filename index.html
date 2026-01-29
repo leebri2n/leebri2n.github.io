@@ -52,7 +52,7 @@
                </h1>
                <!-- Put a small paragraph about yourself -->
                <p>Computational Modeling and Data Analytics, Virginia Tech.</p>
-               <a href="https://github.com/leebri2n/leebri2n.github.io/raw/master/brianlee_resume_v8.pdf" class="btn btn--pink">Resume</a>
+               <a href="https://github.com/leebri2n/leebri2n.github.io/raw/master/resume.pdf" class="btn btn--pink">Resume</a>
             </div>
          </div>
       </header>
@@ -127,13 +127,109 @@
                         <!-- https://vtnsi.github.io/mimik/index.html -->
                      </p>
                      <div class="work__links">
-                        <a href="codex.html" target="_blank" class="link__text">
-                        More<span>&rarr;</span>
+                        <a href="https://github.com/vtnsi/codex" target="_blank" class="link__text">
+                        CODEX GitHub<span>&rarr;</span>
+                        </a>
+                     </div>
+                     <div class="work__links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/11127136" target="_blank" class="link__text">
+                        CODEX Paper<span>&rarr;</span>
                         </a>
                      </div>
                   </div>
                   <div class="work__image-box">
                      <img src="images/cc_venn.png" class="work__image" alt="rsc_1" />
+                  </div>
+                </div>
+                <div class="work__box">
+                  <div class="work__text">
+                     <h3>Coverage for Detecting Bias in Facial Recognition Datasets</h3>
+                     <p>
+                        Facial recognition algorithms are known to exhibit varying performance 
+                        across different subgroups defined by factors like race and gender. 
+                        These performance differences have been attributed to disparities in 
+                        the representation of subgroups in the training data. Even when trained 
+                        on large-scale datasets (i.e., “big data”), these disparities may persist. 
+                        When the underlying training data is biased, the trained model is likely 
+                        to be biased as well. Biased facial recognition models may be unreliable 
+                        for underrepresented groups and lead to real world failures such as incorrect 
+                        access control decisions in biometric systems or misidentification of 
+                        individuals. Therefore, methods for assessing the breadth of intersectional 
+                        contexts covered by datasets during the pre-processing phase before significant 
+                        resources are invested in training models are essential. This work explores 
+                        whether frequency coverage can detect data bias and whether coverage correlates 
+                        with deep learning model performance via experiments on two facial recognition 
+                        datasets with attributes for gender, race, and age. This work also explores 
+                        the usefulness of visualizations to practitioners in making decisions about data.
+
+
+                     </p>
+                     <div class="work__links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/11050637" target="_blank" class="link__text">
+                        Paper<span>&rarr;</span>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="work__image-box">
+                     <img src="images/face.jpg" class="work__image" alt="rsc_1" />
+                     <img src="images/IMG_6250.jpg" class="work__image" alt="rsc_1" />
+                  </div>
+                </div>
+                <div class="work__box">
+                  <div class="work__text">
+                     <h3>Data Frequency Coverage Impact on AI Performance</h3>
+                     <p>
+                        Artificial Intelligence (AI) and the subfield machine learning (ML) deployed in 
+                        systems with direct impact on human lives necessitates assurance of these systems 
+                        through rigorous test and evaluation (T&E) methodologies such as those applied to 
+                        testing software systems. Yet, ML differs from other software in important ways, 
+                        limiting the unmodified adoption of software T&E approaches. A key difference 
+                        between software systems that are programmed and ML systems is that ML derives logic 
+                        by learning from data samples. This data dependence makes T&E of the training data an 
+                        important part of AI testing. Combinatorial testing (CT) is an approach matured within 
+                        software testing that has been adapted to measure coverage of the data input space. 
+                        CT-based metrics and methods facilitate measuring the dimensions of a model’s operating envelope, 
+                        understanding the input space distance between domains for model transfer, identifying the top 
+                        information gain data points for fine-tuning a model on a new domain, designing test sets 
+                        that distinguish a model’s performance on learned domains from its generalization to new domains, 
+                        and measuring imbalance in training data frequency coverage and determining impact on resulting 
+                        model performance. The Coverage of Data Explorer (CODEX) tool implements these functionalities 
+                        for the primary purpose of research experimentation and validation of the methods and metrics. 
+                        This tool paper describes CODEX’s functionalities and maps them to AI T&E applications as well 
+                        as gives an overview of the workflow of the tool.
+
+                     </p>
+                     <div class="work__links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/11127136" target="_blank" class="link__text">
+                        Paper<span>&rarr;</span>
+                        </a>
+                     </div>
+                  </div>
+                </div>
+                <div class="work__box">
+                  <div class="work__text">
+                     <h3>Coverage for Detecting Bias in Facial Recognition Datasets</h3>
+                     <p>
+                        Specifying the conditions under which a machine learning (ML) model was trained 
+                        is crucial to defining the operating envelope which in turn is important for understanding 
+                        where the model has known and unknown performance. Metrics such as combinatorial coverage 
+                        applied over metadata features provide a mechanism for defining the envelope for computer 
+                        vision algorithms, but not all metadata features impact performance. In this work, we propose 
+                        Systematic Inclusion & Exclusion, an experimental framework that draws on practices from 
+                        combinatorial interaction testing and design of experiments to identify the critical 
+                        metadata features that define the dimensions of the operating envelope. A data splitting 
+                        algorithm to construct training and test sets for a collection of models is developed to 
+                        implement the framework. The framework is demonstrated on an open-source dataset and learning 
+                        algorithm, and future directions and improvements are suggested.
+                     </p>
+                     <div class="work__links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10675995" target="_blank" class="link__text">
+                        Paper<span>&rarr;</span>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="work__image-box">
+                     <img src="images/Maxar_Reverie_Jumbo-768x511.jpg" class="work__image" alt="rsc_1" />
                   </div>
                 </div>
                 <div class="work__box">
@@ -146,7 +242,7 @@
                           <br> <br>
                           This project evaluates both the efficacy and efficiency of transfer learning as a viable method
                           in the realm of generative AI and on limited datasets of images assembled from an open source dataset 
-                          such as Instagram. My first discusses these findings in the June 2023 edition of the ITEA Journal of 
+                          such as Instagram. My first publication discusses these findings in the June 2023 edition of the ITEA Journal of 
                           Test and Evaluation.
                         </p>
                       <!--<ul class="work__list">
@@ -226,32 +322,6 @@
                         <img src="./images/capstonethumb1.png" class="work__image" alt="ovi" />
                      </div>
                   </div>
-                  <div class="work__box">
-                     <div class="work__text">
-                        <h3>Alex Ovechkin Goal-Scoring Exploratory Data Analysis and Visualization</h3>
-                        <p>
-                           Washington Capitals elite Alexander Ovechkin has taken second place for all-time career
-                           goals scored in NHL history and shows no sign of slowing down. Although it is known he has
-                           a talent for scoring goals, game data suggests that he is in a league of his own entirely.
-                           <br> <br>
-                           This being one of my earliest personal projects, I use basic data preprocessing and statistical methods
-                           to extract characteristics and patterns in Ovechkin's goal-scoring. They are subsequently
-                           used in striking and creative visualizations to easily convey his unmatched proficency when
-                           compared to his peers leaguewide.
-                        </p>
-                        <div class="work__links">
-                           <a href="./ovi.html" target="_blank" class="link__text">
-                           More (WIP)<span>&rarr;</span>
-                           </a>
-                           <!--<a href="https://github.com/leebri2n/personal-projects/tree/main/p02_nhlscoring" title="View Source Code" target="_blank">
-                              <img src="./images/github.svg" class="work__code" alt="GitHub">
-                              </a>-->
-                        </div>
-                     </div>
-                     <div class="work__image-box">
-                        <img src="./images/ovi.jpg" class="work__image" alt="ovi" />
-                     </div>
-                  </div>
                </div>
             </div>
          </section>
@@ -266,10 +336,10 @@
                         <p>
                            Throughout my time at Virginia Tech, I have supported the advancement
                            of data analysis and data literacy as skills necessary for a world
-                           depending on its insights. One opportunity I saw was to get the CMDA
-                           club back on track. In my two years as president and officer, I tried
+                           depending on the techniques that extract insights from that data. One opportunity I saw was to get the CMDA
+                           club restarted. In my two years as president and officer, I attempted
                            to create new opportunities and spaces for CMDA students to practice
-                           their skills and learn from more experienced individuals.
+                           their skills and learn from more experienced individuals in the field.
                            <br> <br>
                            Data competitions hosted by the club have been the primary way that members were able
                            to get practical experience working with data outside of the classroom.
